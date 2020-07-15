@@ -120,6 +120,7 @@ export default class KeenAdapter extends BaseAdapter {
 
         if (sendPublicEvent) {
             this.trackPublicEvent('pageviews', eventProperties);
+            this.trackPublicEvent(`pageviews-${node.guid.charAt(0)}`, eventProperties);
         }
         this.trackPrivateEvent('pageviews', eventProperties);
     }
